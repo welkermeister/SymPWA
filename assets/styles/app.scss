@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'baloo2';
+    src: url('./baloo-2-v21-latin-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./82143.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: skyblue;
+    font-family: 'baloo2', sans-serif;
+    color: beige;
+    font-size: 200%;
+}
+
+.login, .register {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    color: darkslategray;
+    h1 {
+        text-align: center;
+        color: #fff;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-content: center;
+        margin-bottom: 0.2em;
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            width: 80%;
+        }
+    }
+    .input, label {
+        margin: 0.2em;
+        text-align: center;
+        
+    }
+    input {
+        padding-left: .2em;
+        padding-right: .2em;
+        border: 2px solid rgb(10, 1, 1);
+        border-radius: 3em;
+        width: 40%;
+        height: 3em;
+        margin: .5em;
+        font-size: 70%;
+        font-family: inherit;
+        text-align: center;
+    }
+    button {
+        $buttonColor: rgb(55, 100, 247);
+        border: 1px solid rgb(10, 1, 1);
+        border-radius: 1em;
+        scale: 2;
+        margin: 3em;
+        width: 25%;
+        background-color: rgb(55, 100, 247);
+        color: #fff;
+        font-size: -10%;
+        font-family: inherit;
+        &:hover {
+            background-color: scale-color($color: $buttonColor, $lightness: -20%)
+        }
+    }
+}
+
+a.saveCityButton, button {
+    $saveBtnColor: rgba(0, 101, 145, 0.8);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $saveBtnColor;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    &:hover {
+        background-color: scale-color($color: $saveBtnColor, $lightness: -20%)
+    }
+}
+
+a.removeCityButton {
+    $removeBtnColor: orangered;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $removeBtnColor;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 30px;
+    &:hover {
+        background-color: scale-color($color: $removeBtnColor, $lightness: -20%)
+    }
+}
+
+.grid {
+    display: flex;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
+    justify-items: center;
+    grid-template-columns: 5fr 2fr;
+    overflow: hidden;
+  
+    // Ensure content elements fill up the .column
+    .element {
+      height: 100%;
+    }
+}
+
+.column {
+    display: flex;
+    flex: 5;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    float: left;
+    h4 {
+        font-size: 40%;
+        color: darkslategray;
+        text-align: left;
+        margin: 0px;
+    }
+    .headline {
+        height: 1.5em;
+    }
+    .saved {
+        height: 3em;
+        text-align: center;
+        font-size: 1em;
+    }
+    .performance {
+        height: 0;
+        min-height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+        margin-top: .2em;
+        border-radius: .3em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        $backgroundColor: rgb(0, 101, 145);
+        background-color: $backgroundColor;
+        color: #fff;
+        label {
+            font-size: 75%;
+        }
+    }
+    .performance.visible {
+        height: auto;
+        transition: height 0.5s ease;
+    }
+}
+
+.info {
+    width: 60%;
+}
+
+.savedcities.column {
+    width: 40%;
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    h1 {
+        margin-top: 0.2em;
+    }
+    h2 {
+        background-color: rgb(0, 101, 145);
+        border-radius: 15px;
+    }
+    h4 {
+        opacity: 0;
+    }
+}
+
+.empty {
+    flex-grow: 1;
+}
+
+ul {
+    list-style-type: none;
+    justify-content: center;
+}
+
+li {
+    padding: 10px;
+    background-color: rgba(0, 101, 145, 0.8);
+    border-radius: 15px;
+    margin: 20px;
+    color: beige;
+    transform: scale(0.7);
+}
+
+h1 {
+    background-color: rgb(0, 101, 145);
+    border-radius: 15px;
+    margin-top: 0.1em;
+}

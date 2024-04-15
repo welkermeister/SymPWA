@@ -1,0 +1,21 @@
+{
+    "name": "Pwaether",
+    "short_name": "Pwaether",
+    "description": "The PWA for your weather tracking needs",
+    "start_url": "/login",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "icons/sympwa_icon_144px.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/sympwa_icon_512px.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
