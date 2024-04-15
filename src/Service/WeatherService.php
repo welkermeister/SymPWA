@@ -4,7 +4,6 @@ namespace App\Service;
 
 use Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
-use Symfony\Contracts\HttpClient\ResponseInterface;
 
 class WeatherService
 {
@@ -20,7 +19,7 @@ class WeatherService
 
         $key = $this->containerBag->get("openweather.api_key");
 
-        $response = $this->client->request('GET', 'VS',
+        $response = $this->client->request('GET', 'https://api.openweathermap.org/data/2.5/weather',
          [
             'query' => 
                 [
